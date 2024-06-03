@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-150dp"
+            android:layout_marginEnd="-140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonScan"
+            app:lottie_autoPlay="true"
+            android:layout_marginTop="74dp"
+            app:lottie_fileName="dashboard_animation.json"
+            app:lottie_loop="true" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/buttonScan"
+            android:layout_width="234dp"
+            android:layout_height="234dp"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="64dp"
+            android:src="@color/white"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:strokeWidth="10dp"
+            app:strokeColor="@color/blue_E5"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_margin="12dp"
+            android:translationZ="5dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@id/buttonScan"
+            app:layout_constraintEnd_toEndOf="@id/buttonScan"
+            app:layout_constraintTop_toTopOf="@id/buttonScan"
+            app:layout_constraintBottom_toBottomOf="@id/buttonScan">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_text"
+                android:textColor="@color/blue_28"
+                android:textSize="29sp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/lato_extrabold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_info"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/problems_text"
+                    android:id="@+id/problemCount"
+                    android:fontFamily="@font/lato_semibold"
+                    android:textSize="17sp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/red_C3"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:id="@+id/line"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="74dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="6dp"
+            android:padding="16dp"
+            android:background="@drawable/round_corner_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/line"
+            app:layout_constraintTop_toBottomOf="@id/buttonScan">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_device"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato_extrabold"
+                android:textSize="16sp"
+                android:textColor="@color/black_1C"
+                android:text="@string/text1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/sub_text"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="14sp"
+                android:textColor="@color/gray_7D"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/round_corner_blue_background"
+                android:text="@string/scan_text"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="74dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            android:padding="16dp"
+            android:background="@drawable/round_corner_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/buttonScan">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_viruses"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato_extrabold"
+                android:textSize="16sp"
+                android:textColor="@color/black_1C"
+                android:text="@string/text2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/sub_text"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="14sp"
+                android:textColor="@color/gray_7D"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/round_corner_blue_background"
+                android:text="@string/check_text"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomSheet"
+        android:orientation="vertical"
+        android:background="@drawable/top_rounded_corner_background"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="300dp"
+        android:elevation="12dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_text"
+            android:fontFamily="@font/lato_extrabold"
+            android:textSize="24sp"
+            android:textColor="@color/black_1C"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

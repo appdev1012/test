@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="topic"
+            type="com.test.at.model.data.DataModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_corner_red_background"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_corner_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="8dp"
+                    app:loadImage="@{topic.image}"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1C"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/lato_extrabold"
+                        android:text="@{topic.title}"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_7D"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@{topic.subTitle}"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/lato_extrabold"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/round_red_background"
+                    android:text="@{String.valueOf(topic.count)}"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

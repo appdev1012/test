@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">AT</string>
+
+    <string name="scan_text">Scan</string>
+    <string name="problems_text">%1$s Problems</string>
+    <string name="text1">Device Scan</string>
+    <string name="sub_text">Show you all info about phone</string>
+    <string name="text2">Check for Viruses</string>
+    <string name="check_text">Check</string>
+    <string name="dashboard_text">Dashboard</string>
+
+    <string name="device_text">Device info</string>
+
+    <string name="sensor_text">Calibration of sensors</string>
+    <string name="sub_text2">Sensor calibration options</string>
+
+    <string name="monitor_text">App monitoring</string>
+    <string name="sub_text3">App performance monitoring</string>
+
+    <string name="antivirus_text">AntiVirus</string>
+    <string name="sub_text4">Mobile antivirus protection</string>
+
+    <string name="memory_text">Device Memory Information</string>
+    <string name="sub_text5">Discover phone memory</string>
+
+    <string name="manager_text">File manager</string>
+    <string name="sub_text6">Mobile file organizer</string>
+
+    <string name="battery_text">Battery info</string>
+    <string name="sub_text7">Battery health insights</string>
+
+    <string name="wifi_text">Wifi info</string>
+    <string name="sub_text8">Network connection details</string>
+</resources>
